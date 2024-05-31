@@ -1,0 +1,43 @@
+/* Created by: Hai Tran
+* Created on: May 2024
+*/
+
+body {
+  background-color: #fff;
+  padding-left: 15pt;
+  padding-right: 15pt;
+  padding-top: 15pt;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: rgb(0 0 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  padding-top: 5pt;
+}
+
+img {
+  height: 200px;
+}
+
+table {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr {
+  background-color: #dddddd;
+}
+
+.cell:hover {
+  background-color: lightblue;
+}
