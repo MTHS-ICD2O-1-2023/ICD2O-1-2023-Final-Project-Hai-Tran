@@ -26,7 +26,6 @@ table {
 
 td, th {
   border: 1px solid #ddd;
-  text-align: left;
   padding: 32px;
   text-align: center;
   font-size: 2rem;
@@ -39,4 +38,3 @@ td:hover {
 tr {
   background-color: #ddd;
 }
-
