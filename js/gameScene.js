@@ -5,6 +5,9 @@
 // This file contains the JS functions for gameScene
 
 window.onload = function () {
+  let currentPlayer = "X"
+  document.getElementById("current-player").innerHTML =
+    "The current player is " + currentPlayer
   let count = 10
   let countdown = setInterval(function () {
     document.getElementById("count-down").innerHTML =
@@ -27,10 +30,6 @@ window.onload = function () {
     }
   }, 1000)
 
-  let currentPlayer = "X"
-  document.getElementById("current-player").innerHTML =
-    "The current player is " + currentPlayer
-
   // this function mark the cell with an "X" or "O"
   let cells = document.getElementsByClassName("cell")
   for (let i = 0; i < cells.length; i++) {
@@ -47,7 +46,6 @@ window.onload = function () {
         count--
         if (count < 0) {
           clearInterval(countdown)
-
         }
       }, 1000)
       checkWin()
@@ -98,6 +96,7 @@ window.onload = function () {
       document.getElementById("match-result").innerHTML =
         "The winner is " + currentPlayer
     } else if (
+      // this function check for draw
       cells[0].innerHTML !== "" &&
       cells[1].innerHTML !== "" &&
       cells[2].innerHTML !== "" &&
@@ -119,8 +118,12 @@ window.onload = function () {
   function switchPlayer() {
     if (currentPlayer == "X") {
       currentPlayer = "O"
+      document.getElementById("current-player").innerHTML =
+        "The current player is " + currentPlayer
     } else {
       currentPlayer = "X"
+      document.getElementById("current-player").innerHTML =
+        "The current player is " + currentPlayer
     }
   }
 }
