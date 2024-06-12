@@ -2,7 +2,7 @@
 //
 // Created by: Hai Tran
 // Created on: May 2024
-// This file contains the JS functions for gameScene
+// This file contains the JS functions for index.html
 
 window.onload = function () {
   let currentPlayer = "X"

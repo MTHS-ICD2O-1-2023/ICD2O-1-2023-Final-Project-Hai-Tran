@@ -1,0 +1,33 @@
+/* Created by: Hai Tran
+* Created on: May 2024
+* This file contains the CSS for index.html
+*/
+
+body {
+  padding-left: 15pt;
+  padding-right: 15pt;
+  padding-top: 15pt;
+  background-image: url("/image/backgroundImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body ::after {
+  content: "";
+  background-image: url("/image/backgroundImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+p {
+  color: rgb(0 0 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  padding-top: 5pt;
+}
