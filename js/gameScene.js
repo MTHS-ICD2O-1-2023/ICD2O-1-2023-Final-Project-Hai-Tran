@@ -27,6 +27,7 @@ window.onload = function () {
         "<br />" +
         "The winner is " +
         currentPlayer
+      window.location.href = "index2.html"
     }
   }, 1000)
 
@@ -46,6 +47,19 @@ window.onload = function () {
         count--
         if (count < 0) {
           clearInterval(countdown)
+          document.getElementById("match-result").innerHTML =
+            currentPlayer + " you runs out of time"
+          if (currentPlayer == "X") {
+            currentPlayer = "O"
+          } else {
+            currentPlayer = "X"
+          }
+          document.getElementById("match-result").innerHTML =
+            document.getElementById("match-result").innerHTML +
+            "<br />" +
+            "The winner is " +
+            currentPlayer
+          window.location.href = "index2.html"
         }
       }, 1000)
       checkWin()
@@ -68,6 +82,7 @@ window.onload = function () {
       clearInterval(countdown)
       document.getElementById("match-result").innerHTML =
         "The winner is " + currentPlayer
+      window.location.href = "index2.html"
     } else if (
       // this function check win for column
       (cells[0].innerHTML !== "" &&
@@ -83,6 +98,7 @@ window.onload = function () {
       clearInterval(countdown)
       document.getElementById("match-result").innerHTML =
         "The winner is " + currentPlayer
+      window.location.href = "index2.html"
     } else if (
       // this function check win for diagonal
       (cells[0].innerHTML !== "" &&
@@ -90,11 +106,12 @@ window.onload = function () {
         cells[4].innerHTML === cells[8].innerHTML) ||
       (cells[2].innerHTML !== "" &&
         cells[2].innerHTML === cells[4].innerHTML &&
-        cells[6].innerHTML === cells[6].innerHTML)
+        cells[4].innerHTML === cells[6].innerHTML)
     ) {
       clearInterval(countdown)
       document.getElementById("match-result").innerHTML =
         "The winner is " + currentPlayer
+      window.location.href = "index2.html"
     } else if (
       // this function check for draw
       cells[0].innerHTML !== "" &&
@@ -109,6 +126,7 @@ window.onload = function () {
     ) {
       clearInterval(countdown)
       document.getElementById("match-result").innerHTML = "It's a draw"
+      window.location.href = "index2.html"
     } else {
       switchPlayer()
     }
