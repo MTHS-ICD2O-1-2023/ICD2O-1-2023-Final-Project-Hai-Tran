@@ -23,6 +23,26 @@
     <title>The Tic-Tac-Toe game</title>
   </head>
   <body>
-    <p>Hello world</p>
+    <script src="js/menuScene.js"></script>
+    <div class="Tic-Tac-Toe-rule">
+      <h1>Tic-tac-toe Rule</h1>
+      <p>
+        Players take turns putting their marks in empty squares. The first
+        player to get 3 marks in a row is the winner.
+      </p>
+      <p>If 9 squares are full, and no winner, the game end in a draw</p>
+    </div>
+    <br />
+    <p>Click the button to play game</p>
+    <div class="image">
+      <img src="./image/backgroundImage.png" alt="Tic-Tac-Toe image" />
+    </div>
+    <br />
+    <button
+      class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+      onclick="playGame()"
+    >
+      Play game
+    </button>
   </body>
 </html>

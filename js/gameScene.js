@@ -59,7 +59,7 @@ window.onload = function () {
             "<br />" +
             "The winner is " +
             currentPlayer
-          window.location.href = "index2.html"
+          window.location.href = "menuScene.html"
         }
       }, 1000)
       checkWin()
@@ -77,14 +77,7 @@ window.onload = function () {
         cells[4].innerHTML === cells[5].innerHTML) ||
       (cells[6].innerHTML !== "" &&
         cells[6].innerHTML === cells[7].innerHTML &&
-        cells[7].innerHTML === cells[8].innerHTML)
-    ) {
-      clearInterval(countdown)
-      document.getElementById("match-result").innerHTML =
-        "The winner is " + currentPlayer
-      window.location.href = "index2.html"
-    } else if (
-      // this function check win for column
+        cells[7].innerHTML === cells[8].innerHTML) ||
       (cells[0].innerHTML !== "" &&
         cells[0].innerHTML === cells[3].innerHTML &&
         cells[3].innerHTML === cells[6].innerHTML) ||
@@ -93,13 +86,7 @@ window.onload = function () {
         cells[4].innerHTML === cells[7].innerHTML) ||
       (cells[2].innerHTML !== "" &&
         cells[2].innerHTML === cells[5].innerHTML &&
-        cells[5].innerHTML === cells[8].innerHTML)
-    ) {
-      clearInterval(countdown)
-      document.getElementById("match-result").innerHTML =
-        "The winner is " + currentPlayer
-      window.location.href = "index2.html"
-    } else if (
+        cells[5].innerHTML === cells[8].innerHTML) ||
       // this function check win for diagonal
       (cells[0].innerHTML !== "" &&
         cells[0].innerHTML === cells[4].innerHTML &&
@@ -111,7 +98,14 @@ window.onload = function () {
       clearInterval(countdown)
       document.getElementById("match-result").innerHTML =
         "The winner is " + currentPlayer
-      window.location.href = "index2.html"
+      count = 2
+      countdown = setInterval(function () {
+        count--
+        if (count < 0) {
+          clearInterval(countdown)
+          window.location.href = "menuScene.html"
+        }
+      }, 1000)
     } else if (
       // this function check for draw
       cells[0].innerHTML !== "" &&
@@ -126,7 +120,14 @@ window.onload = function () {
     ) {
       clearInterval(countdown)
       document.getElementById("match-result").innerHTML = "It's a draw"
-      window.location.href = "index2.html"
+      count = 2
+      countdown = setInterval(function () {
+        count--
+        if (count < 0) {
+          clearInterval(countdown)
+          window.location.href = "menuScene.html"
+        }
+      }, 1000)
     } else {
       switchPlayer()
     }
