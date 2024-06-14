@@ -9,14 +9,12 @@ body {
   padding-top: 15pt;
 }
 
- img {
-  width: 300px
- }
+img {
+  width: 300px;
+}
 
 p {
   color: black;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100px;
 }
-
-
