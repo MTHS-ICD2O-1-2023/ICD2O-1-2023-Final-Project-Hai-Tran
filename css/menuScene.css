@@ -1,0 +1,22 @@
+/* Created by: Hai Tran
+* Created on: May 2024
+* This file contains the CSS for menuScene.html
+*/
+
+body {
+  padding-left: 15pt;
+  padding-right: 15pt;
+  padding-top: 15pt;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 300px;
+}
+
+p {
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100px;
+}

@@ -2,7 +2,7 @@
 //
 // Created by: Hai Tran
 // Created on: May 2024
-// This file contains the JS functions for index.html
+// This file contains the JS functions for menuScene.html
 
 function playGame() {
   window.location.href = "gameScene.html"

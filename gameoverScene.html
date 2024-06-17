@@ -7,7 +7,7 @@
     <meta name="author" content="Hai Tran" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#FFFFFF" />
-    <link rel="stylesheet" href="./css/gameScene.css" />
+    <link rel="stylesheet" href="./css/gameoverScene.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -22,31 +22,27 @@
     />
     <title>The Tic-Tac-Toe game</title>
   </head>
-
   <body>
-    <script src="js/gameScene.js"></script>
-    <table>
-      <tr>
-        <td class="cell"></td>
-        <td class="cell"></td>
-        <td class="cell"></td>
-      </tr>
-      <tr>
-        <td class="cell"></td>
-        <td class="cell"></td>
-        <td class="cell"></td>
-      </tr>
-      <tr>
-        <td class="cell"></td>
-        <td class="cell"></td>
-        <td class="cell"></td>
-      </tr>
-    </table>
+    <script src="js/gameoverScene.js"></script>
+    <p>Game end</p>
+    <p>Click the button to play again or click other button to go back to menu</p>
+    <div class="image">
+      <img src="./image/backgroundImage.png" alt="Tic-Tac-Toe image" />
+    </div>
     <br />
-    <div id="current-player"></div>
+    <button
+      class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+      onclick="playAgain()"
+    >
+      Play again
+    </button>
     <br />
-    <div id="count-down"></div>
     <br />
-    <div id="match-result"></div>
+    <button
+      class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+      onclick="goBackToMenuScene()"
+    >
+      Go back to menuScene
+    </button>
   </body>
 </html>
