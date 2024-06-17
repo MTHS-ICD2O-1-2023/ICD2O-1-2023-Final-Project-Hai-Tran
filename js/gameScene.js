@@ -2,7 +2,7 @@
 //
 // Created by: Hai Tran
 // Created on: May 2024
-// This file contains the JS functions for index.html
+// This file contains the JS functions for gameScene.html
 
 window.onload = function () {
   let currentPlayer = "X"
@@ -27,7 +27,7 @@ window.onload = function () {
         "<br />" +
         "The winner is " +
         currentPlayer
-      window.location.href = "index2.html"
+      window.location.href = "gameoverScene.html"
     }
   }, 1000)
 
@@ -59,7 +59,7 @@ window.onload = function () {
             "<br />" +
             "The winner is " +
             currentPlayer
-          window.location.href = "menuScene.html"
+          window.location.href = "gameoverScene.html"
         }
       }, 1000)
       checkWin()
@@ -103,7 +103,7 @@ window.onload = function () {
         count--
         if (count < 0) {
           clearInterval(countdown)
-          window.location.href = "menuScene.html"
+          window.location.href = "gameoverScene.html"
         }
       }, 1000)
     } else if (
@@ -125,7 +125,7 @@ window.onload = function () {
         count--
         if (count < 0) {
           clearInterval(countdown)
-          window.location.href = "menuScene.html"
+          window.location.href = "gameoverScene.html"
         }
       }, 1000)
     } else {
