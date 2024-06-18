@@ -27,7 +27,14 @@ window.onload = function () {
         "<br />" +
         "The winner is " +
         currentPlayer
-      window.location.href = "gameoverScene.html"
+      count = 2
+      countdown = setInterval(function () {
+        count--
+        if (count < 0) {
+          clearInterval(countdown)
+          window.location.href = "gameoverScene.html"
+        }
+      }, 1000)
     }
   }, 1000)
 
@@ -59,7 +66,14 @@ window.onload = function () {
             "<br />" +
             "The winner is " +
             currentPlayer
-          window.location.href = "gameoverScene.html"
+          count = 2
+          countdown = setInterval(function () {
+            count--
+            if (count < 0) {
+              clearInterval(countdown)
+              window.location.href = "gameoverScene.html"
+            }
+          }, 1000)
         }
       }, 1000)
       checkWin()
@@ -68,7 +82,7 @@ window.onload = function () {
 
   function checkWin() {
     if (
-      // this function check win for row
+      // this check win for row
       (cells[0].innerHTML !== "" &&
         cells[0].innerHTML === cells[1].innerHTML &&
         cells[1].innerHTML === cells[2].innerHTML) ||
@@ -78,6 +92,7 @@ window.onload = function () {
       (cells[6].innerHTML !== "" &&
         cells[6].innerHTML === cells[7].innerHTML &&
         cells[7].innerHTML === cells[8].innerHTML) ||
+      // this check win for column
       (cells[0].innerHTML !== "" &&
         cells[0].innerHTML === cells[3].innerHTML &&
         cells[3].innerHTML === cells[6].innerHTML) ||
@@ -87,7 +102,7 @@ window.onload = function () {
       (cells[2].innerHTML !== "" &&
         cells[2].innerHTML === cells[5].innerHTML &&
         cells[5].innerHTML === cells[8].innerHTML) ||
-      // this function check win for diagonal
+      // this check win for diagonal
       (cells[0].innerHTML !== "" &&
         cells[0].innerHTML === cells[4].innerHTML &&
         cells[4].innerHTML === cells[8].innerHTML) ||
@@ -107,7 +122,7 @@ window.onload = function () {
         }
       }, 1000)
     } else if (
-      // this function check for draw
+      // this check for draw
       cells[0].innerHTML !== "" &&
       cells[1].innerHTML !== "" &&
       cells[2].innerHTML !== "" &&
@@ -137,12 +152,10 @@ window.onload = function () {
   function switchPlayer() {
     if (currentPlayer == "X") {
       currentPlayer = "O"
-      document.getElementById("current-player").innerHTML =
-        "The current player is " + currentPlayer
     } else {
       currentPlayer = "X"
-      document.getElementById("current-player").innerHTML =
-        "The current player is " + currentPlayer
     }
+    document.getElementById("current-player").innerHTML =
+        "The current player is " + currentPlayer
   }
 }
