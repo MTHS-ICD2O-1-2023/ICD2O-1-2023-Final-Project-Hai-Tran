@@ -4,10 +4,12 @@
 // Created on: May 2024
 // This file contains the JS functions for index.html
 
-let count = 1
-let countdown = setInterval(function () {
-  count--
-  if (count < 0) {
-    window.location.href = "menuScene.html"
-  }
-}, 1000)
+window.onload = function () {
+  let count = 1
+  let countdown = setInterval(function () {
+    count--
+    if (count < 0) {
+      window.location.href = "menuScene.html"
+    }
+  }, 1000)
+}
